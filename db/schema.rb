@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.integer "gdp"
+    t.integer "country_gdp"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
