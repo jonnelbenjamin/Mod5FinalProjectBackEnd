@@ -1,7 +1,7 @@
 class CreateDisasters < ActiveRecord::Migration[5.2]
   def change
     create_table :disasters do |t|
-      t.string :type
+      t.string :description
       t.boolean :active
       t.integer :latitude
       t.integer :longitude

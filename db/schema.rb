@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
   enable_extension "plpgsql"
 
   create_table "disasters", force: :cascade do |t|
-    t.string "type"
+    t.string "description"
     t.boolean "active"
     t.integer "latitude"
     t.integer "longitude"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.integer "country_gdp"
+    t.bigint "country_gdp"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
   create_table "organizations", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "financial_need"
+    t.bigint "financial_need"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
     t.string "last_name"
     t.string "email"
     t.string "profession"
-    t.integer "credit_card_number"
+    t.bigint "credit_card_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

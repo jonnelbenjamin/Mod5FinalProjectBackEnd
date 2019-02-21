@@ -16,6 +16,8 @@ gem 'puma', '~> 3.11'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'activerecord-suppress_range_error'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
