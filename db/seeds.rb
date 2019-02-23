@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+# users have to be created with .create if you are using AUTH
 User.create(first_name:"Jonnel", last_name:"Benjamin", email:"jonnel.benjamin@gmail.com", profession:"programmer", credit_card_number:973649102384314)
 
 Organization.create(name:"Oxfam International", description:"Oxfam is an international confederation of 17 organizations working in approximately 90 countries worldwide to find solutions to poverty and related injustice around the world.  They focus on issues of active citizenship, agriculture, education, gender justice, health, peace and security and youth outreach.", financial_need:765438297321)
@@ -16,24 +17,6 @@ Organization.create(name:"USAID", description:"The United States Agency for Inte
 Organization.create(name:"Samaritan's Purse", description:"Samaritan's Purse is an evangelical Christian humanitarian aid organization that provides aid to people in physical need as a key part of Christian missionary work", financial_need:25457929480)
 Organization.create(name:"Direct Relief", description:"Direct Relief is a nonprofit, nonpartisan organization with a stated mission to “improve the health and lives of people affected by poverty or emergency situations by mobilizing and providing essential medical resources needed for their care.", financial_need:45682759)
 Organization.create(name:"International Rescue Committee", description:"The International Rescue Committee is a global humanitarian aid, relief, and development nongovernmental organization. Founded in 1933 at the request of Albert Einstein, the IRC offers emergency aid and long-term assistance to refugees and those displaced by war, persecution, or natural disaster.", financial_need:5274928526)
-
-
-UserOrganization.create(user_id: 1, organization_id:1, donation_service:true, donation_amount:2000, direct_service:true)
-
-FollowOrganization.create(user_id: 1, organization_id:2)
-
-FollowLocation.create(user_id:1, location_id:9)
-
-OrganizationDisaster.create(organization_id:1, disaster_id: 1)
-OrganizationDisaster.create(organization_id:2, disaster_id: 8)
-OrganizationDisaster.create(organization_id:3, disaster_id: 2)
-OrganizationDisaster.create(organization_id:4, disaster_id: 4)
-OrganizationDisaster.create(organization_id:5, disaster_id: 3)
-OrganizationDisaster.create(organization_id:6, disaster_id: 5)
-OrganizationDisaster.create(organization_id:7, disaster_id: 7)
-OrganizationDisaster.create(organization_id:1, disaster_id: 6)
-OrganizationDisaster.create(organization_id:2, disaster_id: 9)
-OrganizationDisaster.create(organization_id:7, disaster_id: 10)
 
 Location.create(name:"Tehran, Iran", country_gdp:439510000000, description:"The population of the Iranian capital of Tehran (13.6 million) ﻿s highly exposed to earthquake risk and features prominently in the Swiss Re earthquake rankings.")
 Location.create(name:"Shanghai, China", country_gdp:12240000000000, description:"Shanghai, on China’s central coast, is the country's biggest city and a global financial hub. Its heart is the Bund, a famed waterfront promenade lined with colonial-era buildings.")
@@ -56,3 +39,20 @@ Disaster.create(description:"Flooding", active:false, latitude:11, longitude:67,
 Disaster.create(description:"Monsoon", active:false, latitude:32, longitude:106, location_id: 8)
 Disaster.create(description:"Flooding", active:false, latitude:9, longitude:116, location_id: 9)
 Disaster.create(description:"Hurricane", active:false, latitude:2, longitude:45, location_id: 10)
+
+UserOrganization.create(user_id: 1, organization_id:2, donation_service:true, donation_amount:2000, direct_service:true)
+
+FollowOrganization.create(user_id: 1, organization_id:3)
+
+FollowLocation.create(user_id:1, location_id:2)
+
+OrganizationDisaster.create(organization_id:1, disaster_id: 1)
+OrganizationDisaster.create(organization_id:2, disaster_id: 8)
+OrganizationDisaster.create(organization_id:3, disaster_id: 2)
+OrganizationDisaster.create(organization_id:4, disaster_id: 4)
+OrganizationDisaster.create(organization_id:5, disaster_id: 3)
+OrganizationDisaster.create(organization_id:6, disaster_id: 5)
+OrganizationDisaster.create(organization_id:7, disaster_id: 7)
+OrganizationDisaster.create(organization_id:1, disaster_id: 6)
+OrganizationDisaster.create(organization_id:2, disaster_id: 9)
+OrganizationDisaster.create(organization_id:7, disaster_id: 10)
