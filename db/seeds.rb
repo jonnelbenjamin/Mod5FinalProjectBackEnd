@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-# users have to be created with .create if you are using AUTH
+# users have to be created with .create instead of .find_or_create_by if you are using AUTH
 User.create(first_name:"Jonnel", last_name:"Benjamin", email:"jonnel.benjamin@gmail.com", profession:"programmer", credit_card_number:973649102384314)
 
 Organization.create(name:"Oxfam International", description:"Oxfam is an international confederation of 17 organizations working in approximately 90 countries worldwide to find solutions to poverty and related injustice around the world.  They focus on issues of active citizenship, agriculture, education, gender justice, health, peace and security and youth outreach.", financial_need:765438297321)
