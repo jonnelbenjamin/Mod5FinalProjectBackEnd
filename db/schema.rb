@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
   create_table "disasters", force: :cascade do |t|
     t.string "description"
     t.boolean "active"
-    t.integer "latitude"
-    t.integer "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
