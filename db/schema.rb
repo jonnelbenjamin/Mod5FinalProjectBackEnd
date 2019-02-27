@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password_digest"
     t.string "profession"
     t.bigint "credit_card_number"
     t.datetime "created_at", null: false

@@ -8,7 +8,7 @@
 require 'faker'
 
 # users have to be created with .create instead of .find_or_create_by if you are using AUTH
-User.create(first_name:"Jonnel", last_name:"Benjamin", email:"jonnel.benjamin@gmail.com", profession:"programmer", credit_card_number:973649102384314)
+User.create(first_name:"Jonnel", last_name:"Benjamin", password:"Lennoj23", email:"jonnel.benjamin@gmail.com", profession:"programmer", credit_card_number:973649102384314)
 
 Organization.create(name:"Oxfam International", description:"Oxfam is an international confederation of 17 organizations working in approximately 90 countries worldwide to find solutions to poverty and related injustice around the world.  They focus on issues of active citizenship, agriculture, education, gender justice, health, peace and security and youth outreach.", financial_need:765438297321)
 Organization.create(name:"World Food Programme", description:"The World Food Programme is the food-assistance branch of the United Nations and the world's largest humanitarian organization addressing hunger and promoting food security. According to the WFP, it provides food assistance to an average of 91.4 million people in 83 countries each year.", financial_need:39382775730)
