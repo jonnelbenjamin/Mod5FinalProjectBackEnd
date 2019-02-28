@@ -4,7 +4,9 @@ class UserSerializer < ActiveModel::Serializer
   def followingOrganizations
 
       self.object.organizations.map do |org|
-      {organizationName: org.name
+      {organizationName: org.name,
+        organizationDescription: org.description,
+        organizationFinancialNeed: org.financial_need
         }
   end
 end
@@ -15,5 +17,5 @@ end
   end
 end
 
-  
+
 end
