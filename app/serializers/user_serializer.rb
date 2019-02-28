@@ -6,7 +6,8 @@ class UserSerializer < ActiveModel::Serializer
       self.object.organizations.map do |org|
       {organizationName: org.name,
         organizationDescription: org.description,
-        organizationFinancialNeed: org.financial_need
+        organizationFinancialNeed: org.financial_need,
+        organizationId: org.id
         }
   end
 end
