@@ -18,7 +18,12 @@ class FollowOrganizationsController < ApplicationController
   end
 
   def show
-    render json: FollowOrganization.user.id(params[:id])
+    render json: FollowOrganization.find(params[:id])
+  end
+
+  def destroy
+    
+    render json: FollowOrganization.find_by(organization_id: params[:id]).destroy
   end
 
   private
