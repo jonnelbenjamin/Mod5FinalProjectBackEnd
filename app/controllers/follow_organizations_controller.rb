@@ -4,7 +4,17 @@ class FollowOrganizationsController < ApplicationController
   end
 
   def create
-    render json: FollowOrganization.create(follow_organization_params)
+
+    token = request.headers['Authentication'].split(' ')[1]
+   user_id = decode(token)["user_id"]
+   @follow_organization = FollowOrganization.new(
+        user_id: user_id,
+        organization_id: params[:organization_id]
+      )
+   if @follow_organization.valid?
+     @follow_organization.save
+     render json: @follow_organization, status: :accepted
+   end
   end
 
   def show
