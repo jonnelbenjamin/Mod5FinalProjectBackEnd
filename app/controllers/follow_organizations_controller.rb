@@ -4,7 +4,6 @@ class FollowOrganizationsController < ApplicationController
   end
 
   def create
-
     token = request.headers['Authentication'].split(' ')[1]
    user_id = decode(token)["user_id"]
    @follow_organization = FollowOrganization.new(
@@ -22,7 +21,6 @@ class FollowOrganizationsController < ApplicationController
   end
 
   def destroy
-    
     render json: FollowOrganization.find_by(organization_id: params[:id]).destroy
   end
 
