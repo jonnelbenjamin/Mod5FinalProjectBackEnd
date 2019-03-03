@@ -14,7 +14,10 @@ end
   def followingLocations
 
     self.object.locations.map do |location|
-      {locationName: location.name}
+      {locationName: location.name,
+       locationDescription: location.description,
+        locationGDP: location.country_gdp,
+        locationId: location.id}
   end
 end
 
