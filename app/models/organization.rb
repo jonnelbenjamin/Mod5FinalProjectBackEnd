@@ -7,7 +7,7 @@ class Organization < ApplicationRecord
   has_many :disasters, through: :organization_disasters
 
   def update_total(amount)
-    byebug
+    
     self.financial_need -= amount
     self.save
   end

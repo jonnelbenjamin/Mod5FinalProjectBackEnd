@@ -6,10 +6,10 @@ class OrganizationsController < ApplicationController
   def update
     amount = UserOrganization.all.last[:donation_amount]
     @organization = Organization.find(params[:id])
-    byebug
+    
 
     @organization.update_total(amount)
-    byebug
+
     render json: @organization
   end
 
