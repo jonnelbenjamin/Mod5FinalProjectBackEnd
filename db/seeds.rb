@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+
+
 # users have to be created with .create instead of .find_or_create_by if you are using AUTH
 User.create(first_name:"Jonnel", last_name:"Benjamin", password:"Lennoj23", email:"jonnel.benjamin@gmail.com", profession:"programmer", credit_card_number:973649102384314)
 
