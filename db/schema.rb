@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
     t.boolean "donation_service"
     t.integer "donation_amount"
     t.boolean "direct_service"
+    t.integer "number_of_days_going"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

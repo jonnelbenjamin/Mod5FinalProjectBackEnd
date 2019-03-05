@@ -20,6 +20,22 @@ class UserOrganizationsController < ApplicationController
    end
   end
 
+  def go
+    token = request.headers['Authentication'].split(' ')[1]
+   user_id = decode(token)["user_id"]
+   @user_organizations = UserOrganization.new(
+        user_id: user_id,
+        organization_id: params[:organization_id],
+        direct_service: params[:direct_service],
+        number_of_days_going: params[:number_of_days_going]
+      )
+    
+   if @user_organizations.valid?
+     @user_organizations.save
+     render json: @user_organizations, status: :accepted
+   end
+  end
+
   private
 
   def strong_params

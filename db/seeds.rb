@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+
 
 
 
@@ -42,7 +42,7 @@ Disaster.create(description:"Monsoon", active:false, latitude:31.666, longitude:
 Disaster.create(description:"Flooding", active:false, latitude:-8.655, longitude:116.313, location_id: 9)
 Disaster.create(description:"Hurricane", active:false, latitude:2.06, longitude:45.32, location_id: 10)
 
-UserOrganization.create(user_id: 1, organization_id:2, donation_service:true, donation_amount:2000, direct_service:true)
+UserOrganization.create(user_id: 1, organization_id:2, donation_service:true, donation_amount:2000, direct_service:true, number_of_days_going: 5)
 
 FollowOrganization.create(user_id: 1, organization_id:3)
 
