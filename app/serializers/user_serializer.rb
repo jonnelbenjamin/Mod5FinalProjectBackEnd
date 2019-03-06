@@ -7,7 +7,8 @@ class UserSerializer < ActiveModel::Serializer
       {organizationName: org.name,
         organizationDescription: org.description,
         organizationFinancialNeed: org.financial_need,
-        organizationId: org.id
+        organizationId: org.id,
+        organizationImage: org.image
         }
   end
 end

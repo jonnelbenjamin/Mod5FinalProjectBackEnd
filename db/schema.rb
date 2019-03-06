@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
     t.string "name"
     t.string "description"
     t.bigint "financial_need"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
