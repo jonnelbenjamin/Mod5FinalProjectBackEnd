@@ -18,7 +18,8 @@ end
       {locationName: location.name,
        locationDescription: location.description,
         locationGDP: location.country_gdp,
-        locationId: location.id}
+        locationId: location.id,
+        locationImage: location.image}
   end
 end
 

@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_172043) do
     t.string "name"
     t.bigint "country_gdp"
     t.string "description"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
