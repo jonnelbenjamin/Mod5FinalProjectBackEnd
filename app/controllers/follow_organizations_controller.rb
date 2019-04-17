@@ -4,12 +4,14 @@ class FollowOrganizationsController < ApplicationController
   end
 
   def create
+
     token = request.headers['Authentication'].split(' ')[1]
    user_id = decode(token)["user_id"]
    @follow_organization = FollowOrganization.new(
         user_id: user_id,
         organization_id: params[:organization_id]
       )
+
    if @follow_organization.valid?
      @follow_organization.save
      render json: @follow_organization, status: :accepted

@@ -15,8 +15,11 @@ class UsersController < ApplicationController
   end
 
   def create
+    byebug
     @user = User.create(user_params)
+    byebug
     @user.password = params[:password]
+    byebug
     @user.password_confirmation = params[:password_confirmation]
     @user.save
     if @user.valid?
